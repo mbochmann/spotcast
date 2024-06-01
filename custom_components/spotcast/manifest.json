@@ -14,5 +14,5 @@
   "documentation": "https://github.com/mbochmann/spotcast",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/mbochmann/spotcast/issues",
-  "version": "v3.6.30.2"
+  "version": "v3.6.30.3"
 }
