@@ -39,7 +39,7 @@ start:
       required: false
       selector:
         text:
-    sp_type:
+    type:
       name: "Type"
       description: "Set the search type"
       required: true
