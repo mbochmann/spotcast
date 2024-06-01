@@ -39,10 +39,10 @@ start:
       required: false
       selector:
         text:
-    type:
+    sp_type:
       name: "Type"
       description: "Set the search type"
-      required: true
+      required: false
       default: "all"
       example: "artist"
       selector:

@@ -14,7 +14,7 @@ CONF_DEVICE_NAME = "device_name"
 CONF_SPOTIFY_URI = "uri"
 CONF_SPOTIFY_SEARCH = "search"
 CONF_SPOTIFY_CATEGORY = "category"
-CONF_SPOTIFY_TYPE = "type"
+CONF_SPOTIFY_TYPE = "sp_type"
 CONF_SPOTIFY_COUNTRY = "country"
 CONF_SPOTIFY_LIMIT = "limit"
 CONF_ACCOUNTS = "accounts"
@@ -77,8 +77,8 @@ SERVICE_START_COMMAND_SCHEMA = vol.Schema(
         vol.Optional(CONF_ENTITY_ID): cv.string,
         vol.Optional(CONF_SPOTIFY_URI): cv.string,
         vol.Optional(CONF_SPOTIFY_SEARCH): cv.string,
-        vol.Required(CONF_SPOTIFY_CATEGORY, default="all"): cv.string,
-        vol.Optional(CONF_SPOTIFY_TYPE): cv.string,        
+        vol.Optional(CONF_SPOTIFY_CATEGORY): cv.string,
+        vol.Optional(CONF_SPOTIFY_TYPE, default="all"): cv.string,        
         vol.Optional(CONF_SPOTIFY_COUNTRY): cv.string,
         vol.Optional(CONF_SPOTIFY_LIMIT, default=20): cv.positive_int,
         vol.Optional(CONF_SPOTIFY_ACCOUNT): cv.string,
