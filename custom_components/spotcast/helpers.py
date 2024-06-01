@@ -108,7 +108,7 @@ def get_search_results(search:str, sp_type:str, spotify_client:spotipy.Spotify, 
     _LOGGER.debug("using search query to find uri")
 
     SEARCH_TYPES = ["artist", "album", "track", "playlist"]
-    if sp_type != "all"
+    if sp_type != "all":
         SEARCH_TYPES = [sp_type]
     search = search.upper()
 
