@@ -28,6 +28,7 @@ from .const import (
     CONF_SPOTIFY_URI,
     CONF_SPOTIFY_SEARCH,
     CONF_SPOTIFY_CATEGORY,
+    CONF_SPOTIFY_TYPE,
     CONF_SPOTIFY_COUNTRY,
     CONF_SPOTIFY_LIMIT,
     CONF_START_VOL,
@@ -199,6 +200,7 @@ def setup(hass: ha_core.HomeAssistant, config: collections.OrderedDict) -> bool:
         """service called."""
         uri = call.data.get(CONF_SPOTIFY_URI)
         category = call.data.get(CONF_SPOTIFY_CATEGORY)
+        sp_type = call.data.get(CONF_SPOTIFY_TYPE)
         country = call.data.get(CONF_SPOTIFY_COUNTRY)
         limit = call.data.get(CONF_SPOTIFY_LIMIT)
         search = call.data.get(CONF_SPOTIFY_SEARCH)
@@ -280,7 +282,7 @@ def setup(hass: ha_core.HomeAssistant, config: collections.OrderedDict) -> bool:
 
             if is_empty_str(uri):
                 # get uri from search request
-                uri = get_search_results(search, client, country)
+                uri = get_search_results(search,sp_type, client, country)
 
             spotcast_controller.play(
                 client,

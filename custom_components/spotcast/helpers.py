@@ -103,12 +103,13 @@ def async_wrap(func):
 
     return run
 
-def get_search_results(search:str, spotify_client:spotipy.Spotify, country:str=None) -> str:
+def get_search_results(search:str, sp_type:str, spotify_client:spotipy.Spotify, country:str=None) -> str:
 
     _LOGGER.debug("using search query to find uri")
 
     SEARCH_TYPES = ["artist", "album", "track", "playlist"]
-
+    if sp_type != "all"
+        SEARCH_TYPES = [sp_type]
     search = search.upper()
 
     results = []

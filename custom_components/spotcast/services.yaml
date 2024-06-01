@@ -39,6 +39,17 @@ start:
       required: false
       selector:
         text:
+    type:
+      name: "Type"
+      description: ""
+      required: false
+      selector:
+        options:
+          - "all"
+          - "artist"
+          - "album"
+          - "track"
+          - "playlist"
     country:
       name: "Country"
       description: "Country code to use with category. See https://spotipy.readthedocs.io/en/2.19.0/#spotipy.client.Spotify.country_codes for list of available codes"
