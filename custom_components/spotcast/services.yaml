@@ -41,7 +41,7 @@ start:
         text:
     sp_type:
       name: "Type"
-      description: "Set the search type"
+      description: "Set the search type. Allowed types are album, artist, playlist, track, show, episode, audiobook"
       required: false
       default: "all"
       example: "artist"
@@ -49,10 +49,13 @@ start:
         select:
           options:
             - "all"
-            - "artist"
             - "album"
-            - "track"
+            - "artist"
             - "playlist"
+            - "track"
+            - "show"
+            - "episode"
+            - "audiobook"
     country:
       name: "Country"
       description: "Country code to use with category. See https://spotipy.readthedocs.io/en/2.19.0/#spotipy.client.Spotify.country_codes for list of available codes"
