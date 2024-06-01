@@ -42,8 +42,9 @@ start:
     type:
       name: "Type"
       description: "Set the search type"
-      required: false
+      required: true
       default: "all"
+      example: "artist"
       selector:
         select:
           options:
